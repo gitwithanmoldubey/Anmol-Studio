@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@import "tailwindcss";
+
+:root {
+    --primary-soft: #ff4f5a;
+    --bg-mesh-1: rgba(230, 230, 250, 0.4); /* Lavender */
+    --bg-mesh-2: rgba(255, 240, 245, 0.5); /* Rose */
+    --bg-mesh-3: rgba(240, 255, 240, 0.4); /* Mint */
+    --text-main: #1e1b4b; /* Deep Indigo */
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, var(--bg-mesh-1) 0px, transparent 50%),
+        radial-gradient(at 50% 0%, var(--bg-mesh-2) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, var(--bg-mesh-3) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, var(--bg-mesh-2) 0px, transparent 50%),
+        radial-gradient(at 100% 50%, var(--bg-mesh-1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, var(--bg-mesh-3) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, var(--bg-mesh-1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, var(--bg-mesh-2) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-main);
+}
+
+.glass-modern {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+}
+
+.bg-accent-light {
+    background: rgba(252, 246, 246, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+a.active hr {
+    display: block;
+    background-color: var(--primary-soft);
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 79, 90, 0.15);
+}
+
+@media (max-width: 640px) {
+    a.active {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* Logo Integration - Blends white background into the theme */
+.logo-integrated {
+    mix-blend-mode: multiply;
+    filter: contrast(1.1) brightness(1.02);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.logo-integrated:hover {
+    transform: scale(1.05);
+}
