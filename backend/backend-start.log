@@ -1,0 +1,11 @@
+
+> backend@1.0.0 start
+> node server.js
+
+
+🚀 Server is cruising on PORT: 4000
+🔗 Local Address: http://localhost:4000
+
+DB Connected
+✅ Services Initialized: Database and Cloudinary are ready.
+DB Connected
